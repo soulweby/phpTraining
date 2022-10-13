@@ -102,36 +102,47 @@
     echo "<br />";
     echo "<br />";
 
-    for ($i = 1; $i <= 5; $i++) {
-        if ($i == 3) {
+    // for ($i = 1; $i <= 5; $i++) {
+    //     if ($i == 3) {
 
-            echo "<h2>$i</h2>";
-            
-        }else {
-            
-            for ($k = 1; $k <= $i; $k++) {
-                echo $i;
-            }
-        }
-        echo "<br />";
-    }
+    //         echo "<h2>$i</h2>";
+
+    //     }else {
+
+    //         for ($k = 1; $k <= $i; $k++) {
+    //             echo $i;
+    //         }
+    //     }
+    //     echo "<br />";
+    // }
 
     echo "<br />";
     echo "<br />";
 
-    $var = 0;
-    while ($var <= 20) {
+    // $var = 0;
+    // while ($var <= 20) {
 
-        if ($var == 10) {
-            echo "<h2>$var</h2>";
+    //     if ($var == 10) {
+    //         echo "<h2>$var</h2>";
 
-        }else {
-            echo $var;
-        }
-        echo  '<br />';
-        $var = $var + 2;
+    //     }else {
+    //         echo $var;
+    //     }
+    //     echo  '<br />';
+    //     $var = $var + 2;
+    // }
+
+    $tabl =  [
+        
+            "France" => "Paris",
+            "Allemagne" => "Berlin",
+            "Italie"=> "Rome"
+        
+    ];
+
+    foreach ($tabl as $value) {
+        echo $value . ' ';
     }
-
     ?>
 
 
