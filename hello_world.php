@@ -15,134 +15,177 @@
 
     <?php
 
-    $dateTime = date('d/m/Y h:i:s');
-    echo "<h2> Date: *$dateTime*</h2>";
 
-    $note_math = 15;
-    $note_français = 12;
-    $note_anglais = 9;
+    $showDate = date('l jS \of F Y h:i:s A');
 
-    $moyenne =  ($note_math +  $note_français + $note_anglais) / 3;
-    echo 'la moyenne globale est: ' . $moyenne . '<br /> /20';
+    echo "<h1>$showDate</h1>";
+
+    $noteMath = 15;
+    $noteFran = 19;
+    $noteHist = 14;
+    $moyenne = ($noteFran + $noteHist + $noteMath) / 3;
+    echo "La moyenne est de $moyenne /20";
+
     echo "<br />";
-    $prix_ht = 100;
+    echo "<br />";
+
+    $prixHt = 50;
     $tva = 20;
-    $tcc = $prix_ht * (1 + $tva / 100);
+    $ttc = ($prixHt * (1 + 20 / 100));
+    echo "Le prix TTC du produit est de : <h3>$ttc</h3>";
 
-    echo "<h2>Le prix tout taxe compris : $tcc $</h2>";
+
     echo "<br />";
-
+    echo "<br />";
     $test = "42";
     var_dump($test);
     echo "<br />";
+    echo "<br />";
 
-    $sexe = "femme";
-
-    if ($sexe == "femme") {
-        echo "<p>vous êtes une charmante demoiselle</p>";
-    } else {
-        echo "<p>vous êtes un beau Gosse</p>";
-    };
-
-    $budget = 15593.89;
+    $budget = 154.76;
     $achats = 1554.76;
 
     if ($budget >= $achats) {
-        echo "le budget est ok";
+        echo " Le budget permet l'achat de l'appro";
     } else {
-        echo "revoyez vos copie";
+
+        echo "le budjet est insuffisant";
     }
+
     echo "<br />";
-
-
-    $age = 14;
-
+    echo "<br />";
+    $age = 18;
 
     if ($age >= 18) {
-        echo " vous êtes majeur";
+        echo "vous êtes majeur";
     } else {
-        echo 'vous êtes mineur';
+        echo "vous êtes mineur";
     }
-
     echo "<br />";
     echo "<br />";
 
-    $heure = 20;
+    $heure = 14;
 
-    if ($heure < 0 || $heure > 24) {
-        echo "hors fuseau Horaire";
+    if ($heure < 0 || $heure >= 24) {
+
+        echo "vous êtes hors fuseau";
     } elseif ($heure >= 6 && $heure <= 12) {
+
         echo "bonne matinée";
-    } elseif ($heure > 12 && $heure <= 18) {
-        echo "bon après-midi";
+    } elseif ($heure >= 12 && $heure <= 18) {
+
+        echo "bonne après midi";
     } else {
-        echo "la nuit a été longue";
+
+        echo "bonne nuit";
     }
-
-
     echo "<br />";
     echo "<br />";
 
-    // $postale = 77000;
+    // $codePostale = 77000;
 
-    // while ($postale <= 77999) {
-    //     echo "$postale". ' ';
-    //     $postale++;
+    // while ($codePostale <= 77999) {
+
+    //     echo $codePostale . " ";
+    //     $codePostale++;
     // }
-
     echo "<br />";
     echo "<br />";
 
-    $multi5 = 5;
-
+    $multi = 3;
     for ($i = 1; $i <= 10; $i++) {
-        echo $multi5 . "x" . $i . ' = ' . ($multi5 * $i) . "<br />";
+
+        echo $multi . 'x' . $i . '=' . $multi * $i . '<br />';
+    }
+    echo "<br />";
+    echo "<br />";
+    for ($i = 1; $i < 6; $i++) {
+
+        for ($k = 0; $k < $i; $k++) {
+
+            echo $i;
+        }
+
+        echo "<br />";
+    }
+    echo "<br />";
+    echo "<br />";
+
+    $var = 0;
+    while ($var <= 20) {
+
+
+        if ($var == 10) {
+            echo "<strong>$var</strong>";
+        } else {
+            echo $var . " <br /> ";
+        }
+        // echo $var;
+        $var = $var + 2;
     }
 
     echo "<br />";
     echo "<br />";
 
-    // for ($i = 1; $i <= 5; $i++) {
-    //     if ($i == 3) {
+    $tableau = array(
+        "France" => "Paris",
+        "Allemagne" => "Berlin",
+        "Italie" => "Rome",
 
-    //         echo "<h2>$i</h2>";
+    );
 
-    //     }else {
+    foreach ($tableau as $value) {
 
-    //         for ($k = 1; $k <= $i; $k++) {
-    //             echo $i;
-    //         }
-    //     }
-    //     echo "<br />";
-    // }
-
+        echo "$value <br>\r";
+    }
     echo "<br />";
     echo "<br />";
 
-    // $var = 0;
-    // while ($var <= 20) {
+    for ($i = 0; $i < 10; $i++) {
+        $table[] = rand(0, 50);
+    }
+    var_dump($table);
+    echo "<br />";
+    echo "<br />";
 
-    //     if ($var == 10) {
-    //         echo "<h2>$var</h2>";
+    if (in_array(42, $table)) {
+        echo " 42 est bien dans le tableau";
+    } else {
+        echo "Pas de bole le 42 n'y figure pas";
+    }
 
-    //     }else {
-    //         echo $var;
-    //     }
-    //     echo  '<br />';
-    //     $var = $var + 2;
-    // }
-
-    $tabl =  [
-        
-            "France" => "Paris",
-            "Allemagne" => "Berlin",
-            "Italie"=> "Rome"
-        
-    ];
+    for ($i = 0; $i < 10; $i++) {
+        $tabl[] = rand(0, 100);
+    }
 
     foreach ($tabl as $value) {
-        echo $value . ' ';
+        if ($value < 50) {
+            $tabl1[] = $value;
+        } else {
+            $tabl2[] = $value;
+        }
     }
+
+    echo "<br />";
+    echo "<br />";
+    $pays_population = array(
+        'France' => 67595000,
+        'Suede' => 9998000,
+        'Suisse' => 8417000,
+        'Kosovo' => 1820631,
+        'Malte' => 434403,
+        'Mexique' => 122273500,
+        'Allemagne' => 82800000,
+    );
+
+    echo "Le nombre d'element est : " . count($pays_population);
+
+
+    echo "<br />";
+    echo "<br />";
+
+
+
     ?>
 
 
