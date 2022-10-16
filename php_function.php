@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php training</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+
+
 </head>
 
-<body style="background-color:#301; color: white">
+<body>
     <p>///********************\\\</p>
     <h1>Training PHP</h1>
     <p>///********************\\\</p>
-    <table border=1>
+    <!-- <table border=1>
         <colgroup span="4" class="columns"></colgroup>
         <tr>
             <th>Pays</th>
@@ -32,11 +36,11 @@
             <td>9 millions</td>
             <td>Suédois</td>
         </tr>
-    </table>
+    </table> -->
 
     <?php
 
-    date_default_timezone_set('UTC');
+    date_default_timezone_set('UTC + 2');
 
     $showDate = date('l jS \of F Y h:i:s A');
 
@@ -89,45 +93,86 @@
         ],
     ];
 
-    echo '<pre>';
-    // var_dump($users);
-    echo '</pre>';
+    // echo '<pre>';
+    // // var_dump($users);
+    // echo '</pre>';
 
     echo "<br />";
     echo "<br />";
 
 
-    $tableau = [];
 
-
-    $numeroDeMois = intval(date("m"));
-    // echo $numeroDeMois;
 
     echo "<br />";
     echo "<br />";
     $moisFrancais = array(
-        1=>'Janvier', 'Février', 'Mars', 'Avril',
+        1 => 'Janvier', 'Février', 'Mars', 'Avril',
         'Mai', 'Juin',
         'Juillet', 'Aout', 'Septembre', 'Octobre',
         'Novembre', 'Décembre'
     );
     $cellColor = array(
-        1=>'yellow', 'magenta', 'orange', 'green',
+        1 => 'yellow', 'magenta', 'orange', 'green',
         'pink', 'skyblue',
         'crimson', 'mauve', 'coral',
         'teal', 'blue', 'red'
     );
+
+
     echo "<table border=2> ";
     for ($i = 1; $i <= 12; $i++) {
-        echo "<td>" . $i . "</td>
-        <td bgcolor=$cellColor[$i]>" . $moisFrancais[$i] . "</td>";
+
+        echo '<td>' . $i . "</td><td bgcolor=$cellColor[$i]>" . $moisFrancais[$i] . "<td>";
         ($i % 3 == 0) ? print("<tr></tr>") : print("");
     }
     echo "<table> ";
 
+
     echo "<br />";
     echo "<br />";
-    
+
+    $tableau = range(0, 63);
+
+    foreach ($tableau as $key => $value) {
+        $tableau[$key] = $tableau[$key]/10;
+        // echo $tableau[$key];
+    }
+
+    foreach ($tableau as $ke => $val) {
+        $val = (string) $val;
+        $table[$val] = sin($val);
+        // echo $val . " ";
+    }
+
+    echo "<table border=\"1\"  width=\"50%\" >";
+    echo "<caption><b> Tableau des valeur de sinus de X</br></caption>";
+    echo "<tr> <th>X</th> <th>Sin</th><tr>";
+    foreach ($table as $cley => $val) {
+        echo "<tr><td>$cley</td> <td >$val</td></tr>";
+    }
+    echo "</table> ";
+
+
+
+    $monthDay = [
+        'Janvier' => "january",
+        'Février' => "february",
+        'Mars' => "march",
+        'Avril' => "april",
+        'Mai' => "may",
+        'Juin' => "june",
+        'Juillet' => "july",
+        'Aout' => "agust",
+        'Septembre' => "september",
+        'Octobre' => "october",
+        'Novembre' => "november",
+        'Décembre' => "december"
+    ];
+
+
+    echo "</table>";
+    echo "<hr />";
+
     echo "<br />";
     echo "<br />";
 

@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+}
+
+body {
+  background: #302;
+  color: white;
+  /* font-family: 'Rock Salt', cursive; */
+}
+
+table {
+  table-layout: fixed;
+  /* width: 40%; */
+  /* border-collapse: collapse; */
+  border: 2px solid rgba(255, 255, 255, 0.879);
+}
+caption, b, tr, th {
+      font-family: 'Rock Salt', cursive;
+
+}
