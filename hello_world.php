@@ -82,13 +82,13 @@
     echo "<br />";
     echo "<br />";
 
-    // $codePostale = 77000;
+    $codePostale = 77000;
 
-    // while ($codePostale <= 77999) {
+    while ($codePostale <= 77999) {
 
-    //     echo $codePostale . " ";
-    //     $codePostale++;
-    // }
+        echo $codePostale . " ";
+        $codePostale++;
+    }
     echo "<br />";
     echo "<br />";
 
@@ -99,14 +99,15 @@
     }
     echo "<br />";
     echo "<br />";
-    for ($i = 1; $i < 6; $i++) {
+    for ($i = 0; $i < 5; $i++) {
 
-        for ($k = 0; $k < $i; $k++) {
-
-            echo $i;
+        for ($k = 0; $k < 5; $k++) {
+            
+            echo "camara". $k;
+            // echo $k;
         }
+        echo " <br/>souley" . $i;
 
-        echo "<br />";
     }
     echo "<br />";
     echo "<br />";
@@ -124,6 +125,17 @@
         $var = $var + 2;
     }
 
+    for ($var=0; $var <= 10 ; $var= $var= $var + 2) { 
+
+        if ($var == 6) {
+            echo "<strong>$var <br> </<strong>";
+        } else {
+            echo $var ;
+        }
+        // echo $var;
+    }
+
+
     echo "<br />";
     echo "<br />";
 
@@ -134,9 +146,9 @@
 
     );
 
-    foreach ($tableau as $value) {
+    foreach ($tableau as $key => $value) {
 
-        echo "$value <br>\r";
+        echo " $key => $value <br>\r";
     }
     echo "<br />";
     echo "<br />";

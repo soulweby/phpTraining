@@ -123,7 +123,7 @@
     for ($i = 1; $i <= 12; $i++) {
 
         echo '<td>' . $i . "</td><td bgcolor=$cellColor[$i]>" . $moisFrancais[$i] . "<td>";
-        ($i % 3 == 0) ? print("<tr></tr>") : print("");
+        ($i % 6 == 0) ? print("<tr></tr>") : print("");
     }
     echo "<table> ";
 
